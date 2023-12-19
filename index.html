@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Not Al</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="img/logo.png" alt="Logo">
+    </div>
+    <div class="container">
+        <h1>Not Al</h1>
+        <div class="sag-ust">
+            <button onclick="silTumNotlari()" class="sil-tum-notlar">Bütün Notları Sil</button>
+        </div>
+        <div class="not-container">
+            <form id="notForm">
+                <label for="isim">İsim:</label><br>
+                <input type="text" id="isim" name="isim" required><br><br>
+                <label for="not">Notunuzu buraya yazın:</label><br>
+                <textarea id="not" name="not" rows="4" cols="50"></textarea><br><br>
+                <input type="submit" value="Kaydet">
+            </form>
+        </div>
+    </div>
+    <div id="notlarListesi" class="notlar-listesi"></div>
+
+    <footer>
+        <div class="footer-content">
+            <button onclick="goToTop()" class="go-top-button">Yukarı Git</button>
+            <p>&copy; 2024 Pargusz Not Al</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function goToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE ve Opera
+        }
+    </script>
+</body>
+</html>
